@@ -7,7 +7,6 @@ app.use(cors());
 function getObjectById(array, id) {
   for (var i = 0; i < array.length; i++) {
     if (array[i].id == id) {
-      console.log(array[i])
       return array[i];
     }
   }
@@ -34,4 +33,4 @@ app.get("/:id", function(request, response) {
 });
 
 
-app.listen(process.env.PORT || 3000, () => console.log("Example app listening on port 3000!"))
+app.listen(process.env.PORT || 3000)

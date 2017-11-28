@@ -20,7 +20,7 @@ app.get("/", (req, res) => res.json({
 app.get("/:id", function(request, response) {
   var item = getObjectById(instructors, request.params.id);
   if (!item) {
-    response.status = 404;
+    response.status(404);
     response.json({
       error: {
         message: "No record found!"
